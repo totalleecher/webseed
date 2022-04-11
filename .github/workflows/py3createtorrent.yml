@@ -34,7 +34,7 @@ jobs:
         run: py3createtorrent -p $piece_size -c "$comment" -o "${name}.torrent" --webseed "$url" "$file_name" # Tested on 1.0.0
         
       - name: Upload torrent file
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: ${{ env.name }}
           path: ${{ env.name }}.torrent
